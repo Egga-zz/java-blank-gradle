@@ -19,7 +19,7 @@ It might work with other setups after slight adjustments, but that is not tested
     
     git clone https://github.com/Egga/java-blank-gradle
     cd java-blank-gradle
-    gradle idea
+    ./gradlew idea
 
 Open the directory in Idea.
 
