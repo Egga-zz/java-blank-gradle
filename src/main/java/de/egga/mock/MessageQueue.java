@@ -1,12 +1,8 @@
 package de.egga.mock;
 
-public class MessageQueue {
+public interface MessageQueue {
 
-    public void send(String value) {
+    public void send(String value) ;
 
-    }
-
-    public String receive() {
-        return "Value";
-    }
+    public String receive();
 }
