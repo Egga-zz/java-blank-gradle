@@ -11,7 +11,7 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
-public class ApplicationTest {
+class ApplicationTest {
 
     @Mock
     MessageQueue messageQueue;
@@ -20,14 +20,14 @@ public class ApplicationTest {
     Application application;
 
     @Test
-    public void it_should_collaborate() {
+    void it_should_collaborate() {
         when(messageQueue.receive()).thenReturn("Fetched value");
         String fetched = application.receive();
         assertThat(fetched).isEqualTo("Fetched value");
     }
 
     @Test
-    public void it_should_verify() {
+    void it_should_verify() {
         application.send("some value");
         verify(messageQueue).send("some value");
     }
